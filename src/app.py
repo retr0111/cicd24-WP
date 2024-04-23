@@ -8,7 +8,6 @@ from log import logger
 
 
 def coin_flip_with_gamble(initial_money, bet_amount, guess):
-    """Generator function to simulate flipping a coin and gambling money."""
     money = initial_money
     result = random.choice(['Heads', 'Tails']).lower()
 
@@ -40,4 +39,3 @@ def ui() -> None:
 
 if __name__ == "__main__":
     ui()
-
