@@ -15,3 +15,4 @@ class Test(TestCase):
         assert at.title[0].value.startswith("Coin Flip Gambling Game")
         assert at.subheader[0].value.startswith("Mmmm")
         assert not at.exception
+        
