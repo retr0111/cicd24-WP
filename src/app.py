@@ -6,11 +6,12 @@ import random
 import streamlit as st
 from log import logger
 
+
 def coin_flip_with_gamble(initial_money, bet_amount, guess):
+    """Generator function to simulate flipping a coin and gambling money."""
     money = initial_money
     result = random.choice(['Heads', 'Tails']).lower()
 
-    
     if guess == result:
         money += bet_amount
         x = f"Correct! You won ${bet_amount}.\\\\\\\\ Total money: ${money}"
@@ -19,6 +20,7 @@ def coin_flip_with_gamble(initial_money, bet_amount, guess):
         money -= bet_amount
         x = f"Wrong! You lost ${bet_amount}.\\\\\\\\ Total money: ${money}"
         return x
+
 
 def ui() -> None:
     st.image("src/Banner.jpg")
@@ -34,8 +36,6 @@ def ui() -> None:
     if st.button("Start Gambling"):
         st.write(flip_gamble)
     logger.info(f"{flip_gamble}")
-
-
 
 
 if __name__ == "__main__":
