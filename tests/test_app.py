@@ -9,9 +9,9 @@ from app import ui
 
 class Test(TestCase):
     def test_ui_title_and_header(self):
-        at = AppTest.from_file("./src/app.py")
+        at = AppTest.from_file("src/app.py")
         at.run()
 
-        assert at.title[0].value.startswith("Streamlit Demo")
-        assert at.subheader[0].value.startswith("..")
+        assert at.title[0].value.startswith("Coin Flip Gambling Game")
+        assert at.subheader[0].value.startswith("Mmmm")
         assert not at.exception
